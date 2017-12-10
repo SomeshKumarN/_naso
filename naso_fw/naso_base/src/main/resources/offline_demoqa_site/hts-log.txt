@@ -1,0 +1,51 @@
+HTTrack3.48-1+libhtsjava.so.2 launched on Sun, 10 Dec 2017 16:23:05 at http://demoqa.com/
+(httrack http://demoqa.com/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+16:23:56	Error: 	"Method Not Allowed" (405) at link demoqa.com/xmlrpc.php (from demoqa.com/)
+16:25:25	Warning: 	Moved Permanently for demoqa.com/?p=156
+16:25:25	Warning: 	File has moved from demoqa.com/?p=156 to http://demoqa.com/about-us/
+16:25:25	Warning: 	Moved Permanently for demoqa.com/?p=114
+16:25:25	Warning: 	File has moved from demoqa.com/?p=114 to http://demoqa.com/services/
+16:25:25	Warning: 	Moved Permanently for demoqa.com/?p=22
+16:25:25	Warning: 	File has moved from demoqa.com/?p=22 to http://demoqa.com/draggable/
+16:25:25	Warning: 	Moved Permanently for demoqa.com/?p=82
+16:25:25	Warning: 	File has moved from demoqa.com/?p=82 to http://demoqa.com/tabs/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=28
+16:25:33	Warning: 	File has moved from demoqa.com/?p=28 to http://demoqa.com/contact/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=49
+16:25:33	Warning: 	File has moved from demoqa.com/?p=49 to http://demoqa.com/registration/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=19
+16:25:33	Warning: 	File has moved from demoqa.com/?p=19 to http://demoqa.com/droppable/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=80
+16:25:33	Warning: 	File has moved from demoqa.com/?p=80 to http://demoqa.com/resizable/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=41
+16:25:33	Warning: 	File has moved from demoqa.com/?p=41 to http://demoqa.com/selectable/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=149
+16:25:33	Warning: 	File has moved from demoqa.com/?p=149 to http://demoqa.com/sortable/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=40
+16:25:33	Warning: 	File has moved from demoqa.com/?p=40 to http://demoqa.com/accordion/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=36
+16:25:33	Warning: 	File has moved from demoqa.com/?p=36 to http://demoqa.com/autocomplete/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=24
+16:25:33	Warning: 	File has moved from demoqa.com/?p=24 to http://demoqa.com/datepicker/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=43
+16:25:33	Warning: 	File has moved from demoqa.com/?p=43 to http://demoqa.com/menu/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=76
+16:25:33	Warning: 	File has moved from demoqa.com/?p=76 to http://demoqa.com/slider/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=84
+16:25:33	Warning: 	File has moved from demoqa.com/?p=84 to http://demoqa.com/tooltip/
+16:25:33	Warning: 	Moved Permanently for demoqa.com/?p=11
+16:25:33	Warning: 	File has moved from demoqa.com/?p=11 to http://demoqa.com/frames-and-windows/
+16:25:34	Warning: 	Moved Permanently for demoqa.com/?p=379
+16:25:34	Warning: 	File has moved from demoqa.com/?p=379 to http://demoqa.com/sample-post2/
+16:25:34	Warning: 	Moved Permanently for demoqa.com/?p=377
+16:25:34	Warning: 	File has moved from demoqa.com/?p=377 to http://demoqa.com/sample-post/
+16:25:34	Error: 	"Not Found" (404) at link demoqa.com/wp-content/themes/wp-knowledge-base/UntitledFrame-7 (from demoqa.com/wp-content/themes/wp-knowledge-base/frame1.html)
+
+HTTrack Website Copier/3.48-1 mirror complete in 2 minutes 31 seconds : 218 links scanned, 196 files written (3585441 bytes overall) [2490494 bytes received at 16493 bytes/sec], 1699310 bytes transferred using HTTP compression in 127 files, ratio 28%, 21.8 requests per connection
+(2 errors, 38 warnings, 0 messages)
