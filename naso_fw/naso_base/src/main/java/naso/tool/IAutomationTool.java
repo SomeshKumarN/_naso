@@ -13,6 +13,6 @@ public interface IAutomationTool {
 	public void clickAndSwitchToWindow(String elementXpath);
 
 	public void switchToDefaultWindow();
-	public void getValue(String elementXpath);
+	public String getValue(String elementXpath);
 	public boolean isElementDisplayed(String elementXpath);
 }

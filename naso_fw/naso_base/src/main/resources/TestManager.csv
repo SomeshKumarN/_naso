@@ -1,4 +1,4 @@
-Test01,No,Ksdfsd,Ksdfsd
-Test02,No,Ksdfsd,Ksdfsd
-Test03,No,method1,method2
-BB_TC_01,Yes,LaunchBBSite,VerifyBBLogoDisplayedInHomePage,CloseBrowser
+Demo_TC_01,Yes,launchDemoSite,isRegistrationSectionPresent,isRegistrationLinkPresent,closeBrowser,,,,,
+Demo_TC_02,Yes,launchDemoSite,isInteractionSectionPresent,isDraggableLinkPresent,isDroppableLinkPresent,isResizableLinkPresent,isSelectatbleLinkPresent,isSortableLinkPresent,closeBrowser,
+Demo_TC_03,No,launchDemoSite,isWidgetSectionPresent,isAccordionLinkPresent,isAutocompleteLinkPresent,isDatepickerLinkPresent,isMenuLinkPresent,isSliderLinkPresent,isTabsLinkPresent,isTooltipLinkPresent,closeBrowser
+Demo_TC_04,No,launchDemoSite,isFramesAndWindowsSectionPresent,isFramesAndWindowsLinkPresent,closeBrowser,,,,,

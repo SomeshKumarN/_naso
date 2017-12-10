@@ -48,8 +48,8 @@ public class NasoDriver implements IAutomationTool {
         iAutomationTool.switchToDefaultWindow();
     }
 
-    public void getValue(String elementXpath) {
-        iAutomationTool.getValue(elementXpath);
+    public String getValue(String elementXpath) {
+        return iAutomationTool.getValue(elementXpath);
     }
 
     public boolean isElementDisplayed(String elementXpath) {

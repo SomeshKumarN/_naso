@@ -25,6 +25,7 @@ public class Drivers {
 
         switch (Browser.valueOf(browserName)) {
             case CHROME:
+                System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_linux");
                 Drivers.seleniumDriver = new ChromeDriver();
                 break;
             case FIREFOX:

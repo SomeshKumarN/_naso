@@ -20,8 +20,8 @@ public class SeleniumTool extends BasicSelenium implements IAutomationTool {
         System.out.println("Launch URL called from Selenium tool");
     }
 
-    public void getValue(String xpath) {
-        _findElement(xpath).getText();
+    public String getValue(String xpath) {
+        return _findElement(xpath).getText();
     }
 
     public void closeBrowser() {
