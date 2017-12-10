@@ -61,13 +61,24 @@ public class ScriptManager {
 		ArrayList<String> allTestCases = getAllTestCases();
 		for (String testCase : allTestCases) {
 			if (testCaseId.equals(testCase)) {
-				return CSVReader.getRecordByRow(testManagerPath, counter);
+				return handleNULLMethods(CSVReader.getRecordByRow(testManagerPath, counter));
 			}
 			counter++;
 		}
 		return null;
 	}
 
+    ArrayList<String> handleNULLMethods(ArrayList<String> nonNULLHandledMethods) {
+        ArrayList<String> nullHandledMethods = new ArrayList<String>();
+        for (String method : nonNULLHandledMethods) {
+            if (method.equals("")) {
+                break;
+            } else {
+                nullHandledMethods.add(method);
+            }
+        }
+        return nullHandledMethods;
+    }
 	/**
 	 *
 	 */
