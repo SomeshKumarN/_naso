@@ -13,7 +13,7 @@ public class DynamicMethodCaller {
     static String projectDirectory = System.getProperty("user.dir").replace("/" + Constants.NASO_BASE_DIRECTORY, "");
     static File root = new File(projectDirectory);
     static String[] extensions = {"java"};
-    static int methodPresenceCounter;
+    static int methodPresenceCounter=0;
 
 
     private static void callMethod(String filePath, String methodName) {
@@ -57,9 +57,12 @@ public class DynamicMethodCaller {
 //                System.out.println("File Path ----------------: " + filePath + "\n\n");
             }
         }
-        if (--methodPresenceCounter > Constants.DEFAULT_METHOD_PRESENCE_COUNT) {
+//        if (--methodPresenceCounter > Constants.DEFAULT_METHOD_PRESENCE_COUNT) {
+        if ((methodPresenceCounter-1) > Constants.DEFAULT_METHOD_PRESENCE_COUNT) {
             System.out.println("Method is available more than once hence halting the testing.");
             System.exit(0);
+        } else if(methodPresenceCounter==1){
+            System.out.println("Method is not available anywhere in the code");
         }
 
     }

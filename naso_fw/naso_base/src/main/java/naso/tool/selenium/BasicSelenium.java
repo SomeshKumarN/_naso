@@ -1,6 +1,7 @@
 package naso.tool.selenium;
 
 import naso.tool.Browser;
+import naso.utils.InputPropReader;
 import naso.utils.NasoLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,16 +17,6 @@ import java.util.Set;
 public class BasicSelenium {
 
     private static WebDriver driver = null;
-
-    public BasicSelenium(String browserName) {
-        if (driver == null) {
-            this.driver = _getDriverOf(browserName);
-        }
-    }
-
-    public BasicSelenium(WebDriver driver) {
-        this.driver = driver;
-    }
 
     WebDriver _getDriverOf(String browserName) {
         switch (Browser.valueOf(browserName)) {
@@ -115,5 +106,18 @@ public class BasicSelenium {
             isElementDisplayed = true;
         }
         return isElementDisplayed;
+    }
+
+    protected void _startWebdriver() {
+        if (driver == null) {
+            this.driver = _getDriverOf(InputPropReader.getValueOf("Browser").toUpperCase());
+        } else if (driver != null) {
+            driver.quit();
+            this.driver = _getDriverOf(InputPropReader.getValueOf("Browser").toUpperCase());
+        }
+    }
+
+    protected void _endWebdriver() {
+        driver.quit();
     }
 }

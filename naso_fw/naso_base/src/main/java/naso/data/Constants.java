@@ -7,6 +7,6 @@ public class Constants {
     public static String NASO_SELENIUM_TEST_DIRECTORY = "naso_selenium_test";
     public static String EMPTY_STRING = "";
     public static String INPUT_PROP_PATH="naso_base/src/main/resources/Input.properties";
-    public static String TEST_SUIT_PATH="naso_base/src/main/resources/TestManager.csv";
+    public static String TEST_SUIT_PATH="naso_base/src/main/resources/TestSuit.csv";
 
 }

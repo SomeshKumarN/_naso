@@ -6,20 +6,15 @@ import naso.utils.InputPropReader;
 import org.openqa.selenium.WebDriver;
 
 public class NasoDriver implements IAutomationTool {
-    //    private static IAutomationTool iAutomationTool = null;
     private final IAutomationTool iAutomationTool;
 
     public NasoDriver() {
 
         if (InputPropReader.getValueOf("Tool").equalsIgnoreCase("Selenium")) {
-            iAutomationTool = new SeleniumTool(InputPropReader.getValueOf("Browser").toUpperCase());
+            iAutomationTool = new SeleniumTool();
         } else {
             iAutomationTool = null;
         }
-    }
-
-    public NasoDriver(WebDriver driver) {
-        iAutomationTool = new SeleniumTool(driver);
     }
 
     public void launchBrowser(String URL) {
@@ -54,5 +49,13 @@ public class NasoDriver implements IAutomationTool {
 
     public boolean isElementDisplayed(String elementXpath) {
         return iAutomationTool.isElementDisplayed(elementXpath);
+    }
+
+    public void startTest() {
+        iAutomationTool.startTest();
+    }
+
+    public void endTest() {
+        iAutomationTool.endTest();
     }
 }

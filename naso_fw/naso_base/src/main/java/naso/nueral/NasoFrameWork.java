@@ -6,17 +6,8 @@ public class NasoFrameWork {
 
     protected final NasoDriver nasoDriver;
 
-//    public NasoFrameWork() {
-//        nasoDriver = new NasoDriver();
-//    }
-
-    public NasoFrameWork(){
+    public NasoFrameWork() {
         nasoDriver = new NasoDriver();
     }
-    public NasoFrameWork(WebDriver driver) {
-        nasoDriver = new NasoDriver(driver);
-    }
-
-
 
 }

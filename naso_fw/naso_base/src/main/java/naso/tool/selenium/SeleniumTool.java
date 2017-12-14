@@ -1,19 +1,8 @@
 package naso.tool.selenium;
 
-import org.openqa.selenium.WebDriver;
-
 import naso.tool.IAutomationTool;
 
 public class SeleniumTool extends BasicSelenium implements IAutomationTool {
-
-
-    public SeleniumTool(String browserName) {
-        super(browserName);
-    }
-
-    public SeleniumTool(WebDriver driver) {
-        super(driver);
-    }
 
     public void launchBrowser(String URL) {
         _get(URL);
@@ -48,5 +37,13 @@ public class SeleniumTool extends BasicSelenium implements IAutomationTool {
 
     public boolean isElementDisplayed(String elementXpath) {
         return _isElementDisplayed(elementXpath);
+    }
+
+    public void startTest() {
+        _startWebdriver();
+    }
+
+    public void endTest() {
+        _endWebdriver();
     }
 }

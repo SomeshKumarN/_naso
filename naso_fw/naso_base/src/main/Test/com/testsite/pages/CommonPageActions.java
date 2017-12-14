@@ -18,4 +18,10 @@ public class CommonPageActions extends Supporter {
     public void closeBrowser(){
         nasoDriver.closeBrowser();
     }
+    public void startTest(){
+        nasoDriver.startTest();
+    }
+    public void endTest(){
+        nasoDriver.endTest();
+    }
 }
