@@ -11,6 +11,11 @@ public class SuitManager {
     public static ArrayList<String> testCaseIds = null;
     static String currentTestCaseId = null;
 
+    public static boolean isTestCasesAvailable=false;
+    public static boolean isExecutbaleTestCasesAvailable=false;
+    public static boolean isMethodDefined=false;
+    public static boolean isMethodDefinedMoreThanOnce=false;
+
     int testCasesCount(ArrayList<String> testCases) {
         int totalTestCases = CSVReader.getSize(testManagerPath);
         if (totalTestCases > 0) {
@@ -83,7 +88,13 @@ public class SuitManager {
     public void startTestExecution() {
         testCaseIds = getAllExecutableTestCasesId();
         System.out.println("startTestExecution:-------------------------" + testCaseIds);
-        executeTestCases(testCaseIds);
+        if (testCaseIds.size() > 0) {
+            isExecutbaleTestCasesAvailable = true;
+            executeTestCases(testCaseIds);
+        } else {
+            haltTestSuit("No testcases are set to Execute in the TestSuit.");
+        }
+
     }
 
     void executeTestCases(ArrayList<String> testCases) {
@@ -101,8 +112,16 @@ public class SuitManager {
 
     void executeMethods(ArrayList<String> methods) {
         for (String method : methods) {
+            isMethodDefined = false;
+            isMethodDefinedMoreThanOnce = false;
             System.out.println("\n\nexecuteMethods:" + method + "\n");
             DynamicMethodCaller.invokeMethod(method);
+            if (!isMethodDefined) break;
         }
+    }
+
+    public void haltTestSuit(String reason){
+        System.out.println("Halting the test execution because, "+reason);
+        System.exit(0);
     }
 }

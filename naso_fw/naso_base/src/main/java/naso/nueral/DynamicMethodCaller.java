@@ -22,14 +22,13 @@ public class DynamicMethodCaller {
             Object process = processClass.newInstance();
             Method[] methods = process.getClass().getDeclaredMethods();
             for (Method method : methods) {
-                if (methodPresenceCounter == Constants.DEFAULT_METHOD_PRESENCE_COUNT && method.getName().equals(methodName)) {
+                if(SuitManager.isMethodDefined && method.getName().equals(methodName)){
+                    SuitManager.isMethodDefinedMoreThanOnce=true;
+                }else if(method.getName().equals(methodName)){
                     System.out.println("Methods \"" + method.getName() + "\" is present in Class--: " + processClass.getName());
                     System.out.println("Calling Method is---------: " + method.getName());
                     method.invoke(process);
-                    methodPresenceCounter++;
-                } else if (methodPresenceCounter > Constants.DEFAULT_METHOD_PRESENCE_COUNT && method.getName().equals(methodName)) {
-                    System.out.println("Methods \"" + method.getName() + "\" is also present in Class--: " + processClass.getName());
-                    methodPresenceCounter++;
+                    SuitManager.isMethodDefined=true;
                 }
             }
         } catch (Exception e) {
@@ -57,11 +56,10 @@ public class DynamicMethodCaller {
 //                System.out.println("File Path ----------------: " + filePath + "\n\n");
             }
         }
-//        if (--methodPresenceCounter > Constants.DEFAULT_METHOD_PRESENCE_COUNT) {
-        if ((methodPresenceCounter-1) > Constants.DEFAULT_METHOD_PRESENCE_COUNT) {
+        if(SuitManager.isMethodDefinedMoreThanOnce){
             System.out.println("Method is available more than once hence halting the testing.");
             System.exit(0);
-        } else if(methodPresenceCounter==1){
+        }else if (!SuitManager.isMethodDefined){
             System.out.println("Method is not available anywhere in the code");
         }
 
